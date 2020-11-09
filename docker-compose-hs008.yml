@@ -8,20 +8,23 @@ services:
     build: ../comments/.
     ports:
       - "4001:4001"
+      image: hartmutseitter/dhbw-exercise1-nodejs-posts
   dhbw-exercise1-nodejs-query:
     build: ../query/.
     ports:
       - "4002:4002"
+    image: hartmutseitter/dhbw-exercise1-nodejs-query
   dhbw-exercise1-nodejs-moderation:
     build: ../moderation/.
     ports :
       - "4003:4003"
-
+    image: hartmutseitter/dhbw-exercise1-nodejs-moderation
   dhbw-exercise1-nodejs-eventbus:
     build: ../event-bus/.
     ports:
       - "4005:4005"
-  mongo:
+    image: hartmutseitter/dhbw-exercise1-nodejs-eventbus
+      mongo:
     image: "mongo"
     ports:
       - "27017:27017"
