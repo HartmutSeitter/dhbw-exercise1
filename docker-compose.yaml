@@ -1,0 +1,28 @@
+version: '3'
+services: 
+  dhbw-exercise1-nodejs-posts:
+    build: ../posts/.
+    ports:
+      - "4000:4000"
+  dhbw-exercise1-nodejs-comments:
+    build: ../comments/.
+    ports:
+      - "4001:4001"
+  dhbw-exercise1-nodejs-query:
+    build: ../query/.
+    ports:
+      - "4002:4002"
+  dhbw-exercise1-nodejs-moderation:
+    build: ../moderation/.
+    ports :
+      - "4003:4003"
+
+  dhbw-exercise1-nodejs-eventbus:
+    build: ../event-bus/.
+    ports:
+      - "4005:4005"
+networks:
+  default:
+    external:
+      name: hsdocker
+      
